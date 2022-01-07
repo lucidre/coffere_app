@@ -1,7 +1,7 @@
 import 'package:coffere_app/model/coffee.dart';
 import 'package:flutter/material.dart';
 
-import 'coffee_details.dart';
+import 'details/coffee_details.dart';
 
 void main() {
   runApp(const CoffeeList());
