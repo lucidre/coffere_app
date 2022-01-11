@@ -64,13 +64,16 @@ class _CoffeeDetailsState extends State<CoffeeDetails> {
             child: child,
           );
         },
-        child: Container(
-          height: 400,
-          width: 400,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(widget.coffee.image),
-              fit: BoxFit.fitHeight,
+        child: Hero(
+          tag: widget.coffee.name,
+          child: Container(
+            height: 400,
+            width: 400,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(widget.coffee.image),
+                fit: BoxFit.fitHeight,
+              ),
             ),
           ),
         ),

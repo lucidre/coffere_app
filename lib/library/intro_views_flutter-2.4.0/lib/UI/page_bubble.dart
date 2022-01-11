@@ -20,7 +20,7 @@ class PageBubble extends StatelessWidget {
       width: 55.0,
       height: 65.0,
       decoration:
-          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0))),
+          const BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10.0))),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(0.5),
@@ -29,9 +29,9 @@ class PageBubble extends StatelessWidget {
             //This method return in between values according to active percent.
             height: 4.0,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(const Radius.circular(0.0)),
+              borderRadius: const BorderRadius.all(Radius.circular(0.0)),
               //Alpha is used to create fade effect for background color
-              color: viewModel.isHollow ? Colors.white24 : Colors.brown[45],
+              color: viewModel.isHollow ? Colors.white24 : Colors.brown,
               border: Border.all(
                 color: viewModel.isHollow
                     ? viewModel.bubbleBackgroundColor.withAlpha(

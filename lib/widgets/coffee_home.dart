@@ -44,7 +44,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
             left: 0,
             right: 0,
             child: Image.asset(
-              coffees[6].image,
+              coffees[9].image,
               fit: BoxFit.fitHeight,
             ),
           ),
@@ -54,7 +54,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
             right: 0,
             bottom: 0,
             child: Image.asset(
-              coffees[7].image,
+              coffees[10].image,
               fit: BoxFit.cover,
             ),
           ),
@@ -64,7 +64,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
             right: 0,
             bottom: -size.height * 0.8,
             child: Image.asset(
-              coffees[8].image,
+              coffees[11].image,
               fit: BoxFit.cover,
             ),
           ),

@@ -8,7 +8,137 @@ double _doubleInRange(Random source, num start, num end) =>
 
 final random = Random();
 
+final coffeeTypes = [
+  CoffeeType('Coffee', Icons.image),
+  CoffeeType('Fika', Icons.coffee),
+  CoffeeType('Lotte', Icons.image),
+  CoffeeType('Coffee', Icons.image),
+  CoffeeType('Fika', Icons.coffee),
+  CoffeeType('Lotte', Icons.image),
+];
+
+class CoffeeType {
+  final String name;
+  final IconData image;
+
+  CoffeeType(this.name, this.image);
+}
+
 final coffees = [
+  Coffee(
+    name: 'Batch Brew',
+    image: 'assets/images/oboarding/coffee1.png',
+    price: _doubleInRange(random, 3, 7),
+    about:
+        'A batch brew is a coffee made in an automated pour over machine, like a Moccamaster. These machines use a filter and brew much larger quantities of coffee than devices like the AeroPress, V60 or Chemex.',
+    prepTime: '8 minutes',
+    nutritionInfo:
+        'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
+    ingredients: [
+      Ingredients(
+          title: 'Light Muscovado Sugar',
+          iconData: Icons.timelapse,
+          color: Colors.green),
+      Ingredients(
+          title: 'Self-raising Flour',
+          iconData: Icons.image,
+          color: Colors.brown),
+      Ingredients(
+          title: '2 Large Eggs',
+          iconData: Icons.wrong_location_sharp,
+          color: Colors.orange),
+      Ingredients(
+          title: '2 tsp Instant Coffee',
+          iconData: Icons.timelapse,
+          color: Colors.green),
+      Ingredients(
+          title: 'Light Muscovado Sugar',
+          iconData: Icons.image,
+          color: Colors.brown),
+      Ingredients(
+          title: 'Mascarpone',
+          iconData: Icons.wrong_location_sharp,
+          color: Colors.orange),
+      Ingredients(
+          title: 'Soft Cheese', iconData: Icons.image, color: Colors.brown),
+    ],
+  ),
+  Coffee(
+    name: 'Cold Drip',
+    image: 'assets/images/oboarding/coffee2.png',
+    price: _doubleInRange(random, 3, 7),
+    about:
+        'Cold drip coffee is similar to coffee brewed in a pour-over device, except that the process uses cold water and takes much longer. Our Merlo stores use a Yama cold drip tower to make cold drip coffee.',
+    prepTime: '7 minutes',
+    nutritionInfo:
+        'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
+    ingredients: [
+      Ingredients(
+          title: 'Light Muscovado Sugar',
+          iconData: Icons.timelapse,
+          color: Colors.green),
+      Ingredients(
+          title: 'Self-raising Flour',
+          iconData: Icons.image,
+          color: Colors.brown),
+      Ingredients(
+          title: '2 Large Eggs',
+          iconData: Icons.wrong_location_sharp,
+          color: Colors.orange),
+      Ingredients(
+          title: '2 tsp Instant Coffee',
+          iconData: Icons.timelapse,
+          color: Colors.green),
+      Ingredients(
+          title: 'Light Muscovado Sugar',
+          iconData: Icons.image,
+          color: Colors.brown),
+      Ingredients(
+          title: 'Mascarpone',
+          iconData: Icons.wrong_location_sharp,
+          color: Colors.orange),
+      Ingredients(
+          title: 'Soft Cheese', iconData: Icons.image, color: Colors.brown),
+    ],
+  ),
+  Coffee(
+    name: 'Cold Brew',
+    image: 'assets/images/oboarding/coffee3.png',
+    price: _doubleInRange(random, 3, 7),
+    about:
+        'Our Cold Brew coffee can is produced by submerging our premium Zambia coffee beans in cold water for an extended period of time. This results in a smooth and refreshing brew with 180mg of caffeine - similar to a double-shot espresso.',
+    prepTime: '7 minutes',
+    nutritionInfo:
+        'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
+    ingredients: [
+      Ingredients(
+          title: 'Light Muscovado Sugar',
+          iconData: Icons.timelapse,
+          color: Colors.green),
+      Ingredients(
+          title: 'Self-raising Flour',
+          iconData: Icons.image,
+          color: Colors.brown),
+      Ingredients(
+          title: '2 Large Eggs',
+          iconData: Icons.wrong_location_sharp,
+          color: Colors.orange),
+      Ingredients(
+          title: '2 tsp Instant Coffee',
+          iconData: Icons.timelapse,
+          color: Colors.green),
+      Ingredients(
+          title: 'Light Muscovado Sugar',
+          iconData: Icons.image,
+          color: Colors.brown),
+      Ingredients(
+          title: 'Mascarpone',
+          iconData: Icons.wrong_location_sharp,
+          color: Colors.orange),
+      Ingredients(
+          title: 'Soft Cheese', iconData: Icons.image, color: Colors.brown),
+    ],
+  ),
   Coffee(
     name: 'Espresso',
     image: 'assets/images/1.png',
@@ -434,120 +564,6 @@ final coffees = [
     about:
         'Combine a scoop of vanilla ice cream and a double shot of hot espresso and you have an affogato. Great for a post-lunch or dinner treat.',
     prepTime: '8 minutes',
-    nutritionInfo:
-        'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
-    ingredients: [
-      Ingredients(
-          title: 'Light Muscovado Sugar',
-          iconData: Icons.timelapse,
-          color: Colors.green),
-      Ingredients(
-          title: 'Self-raising Flour',
-          iconData: Icons.image,
-          color: Colors.brown),
-      Ingredients(
-          title: '2 Large Eggs',
-          iconData: Icons.wrong_location_sharp,
-          color: Colors.orange),
-      Ingredients(
-          title: '2 tsp Instant Coffee',
-          iconData: Icons.timelapse,
-          color: Colors.green),
-      Ingredients(
-          title: 'Light Muscovado Sugar',
-          iconData: Icons.image,
-          color: Colors.brown),
-      Ingredients(
-          title: 'Mascarpone',
-          iconData: Icons.wrong_location_sharp,
-          color: Colors.orange),
-      Ingredients(
-          title: 'Soft Cheese', iconData: Icons.image, color: Colors.brown),
-    ],
-  ),
-  Coffee(
-    name: 'Batch Brew',
-    image: 'assets/images/oboarding/coffee1.png',
-    price: _doubleInRange(random, 3, 7),
-    about:
-        'A batch brew is a coffee made in an automated pour over machine, like a Moccamaster. These machines use a filter and brew much larger quantities of coffee than devices like the AeroPress, V60 or Chemex.',
-    prepTime: '8 minutes',
-    nutritionInfo:
-        'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
-    ingredients: [
-      Ingredients(
-          title: 'Light Muscovado Sugar',
-          iconData: Icons.timelapse,
-          color: Colors.green),
-      Ingredients(
-          title: 'Self-raising Flour',
-          iconData: Icons.image,
-          color: Colors.brown),
-      Ingredients(
-          title: '2 Large Eggs',
-          iconData: Icons.wrong_location_sharp,
-          color: Colors.orange),
-      Ingredients(
-          title: '2 tsp Instant Coffee',
-          iconData: Icons.timelapse,
-          color: Colors.green),
-      Ingredients(
-          title: 'Light Muscovado Sugar',
-          iconData: Icons.image,
-          color: Colors.brown),
-      Ingredients(
-          title: 'Mascarpone',
-          iconData: Icons.wrong_location_sharp,
-          color: Colors.orange),
-      Ingredients(
-          title: 'Soft Cheese', iconData: Icons.image, color: Colors.brown),
-    ],
-  ),
-  Coffee(
-    name: 'Cold Drip',
-    image: 'assets/images/oboarding/coffee2.png',
-    price: _doubleInRange(random, 3, 7),
-    about:
-        'Cold drip coffee is similar to coffee brewed in a pour-over device, except that the process uses cold water and takes much longer. Our Merlo stores use a Yama cold drip tower to make cold drip coffee.',
-    prepTime: '7 minutes',
-    nutritionInfo:
-        'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
-    ingredients: [
-      Ingredients(
-          title: 'Light Muscovado Sugar',
-          iconData: Icons.timelapse,
-          color: Colors.green),
-      Ingredients(
-          title: 'Self-raising Flour',
-          iconData: Icons.image,
-          color: Colors.brown),
-      Ingredients(
-          title: '2 Large Eggs',
-          iconData: Icons.wrong_location_sharp,
-          color: Colors.orange),
-      Ingredients(
-          title: '2 tsp Instant Coffee',
-          iconData: Icons.timelapse,
-          color: Colors.green),
-      Ingredients(
-          title: 'Light Muscovado Sugar',
-          iconData: Icons.image,
-          color: Colors.brown),
-      Ingredients(
-          title: 'Mascarpone',
-          iconData: Icons.wrong_location_sharp,
-          color: Colors.orange),
-      Ingredients(
-          title: 'Soft Cheese', iconData: Icons.image, color: Colors.brown),
-    ],
-  ),
-  Coffee(
-    name: 'Cold Brew',
-    image: 'assets/images/oboarding/coffee3.png',
-    price: _doubleInRange(random, 3, 7),
-    about:
-        'Our Cold Brew coffee can is produced by submerging our premium Zambia coffee beans in cold water for an extended period of time. This results in a smooth and refreshing brew with 180mg of caffeine - similar to a double-shot espresso.',
-    prepTime: '7 minutes',
     nutritionInfo:
         'Black coffee contains no significant amounts of the macronutrients, fat, carbohydrate and protein and therefore contains only 1-2 kcal per 100ml34.\n\nHowever, the final nutritional profile of a cup of coffee will be affected by several factors:\n\nThe addition of milk, cream, sugar or other sweeteners to taste will affect the final nutritional value and may increase the calorie content.\n\nThe variation in cup sizes used across Europe may alter the nutritional value.',
     ingredients: [

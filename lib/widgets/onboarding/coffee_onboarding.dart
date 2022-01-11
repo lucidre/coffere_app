@@ -1,9 +1,8 @@
 import 'package:coffere_app/library/intro_views_flutter-2.4.0/lib/Models/page_view_model.dart';
 import 'package:coffere_app/library/intro_views_flutter-2.4.0/lib/intro_views_flutter.dart';
 import 'package:coffere_app/model/coffee.dart';
+import 'package:coffere_app/widgets/home/coffee_landing_page.dart';
 import 'package:flutter/material.dart';
-
-import '../coffee_list.dart';
 
 class CoffeeOnBoarding extends StatefulWidget {
   const CoffeeOnBoarding({Key? key}) : super(key: key);
@@ -132,7 +131,7 @@ class _CoffeeOnBoardingState extends State<CoffeeOnBoarding> {
                 pageBuilder: (ctx, animation, _) {
                   return FadeTransition(
                     opacity: animation,
-                    child: const CoffeeList(),
+                    child: const CoffeeLandingPage(),
                   );
                 },
               ),

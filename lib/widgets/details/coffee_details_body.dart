@@ -82,7 +82,7 @@ class CoffeeDetailsBody extends StatelessWidget {
                       style: textStyleHeader,
                     ),
                     const SizedBox(
-                      width: 5,
+                      height: 3,
                     ),
                     Text(
                       coffee.prepTime,
@@ -117,7 +117,7 @@ class CoffeeDetailsBody extends StatelessWidget {
                       style: textStyleHeader,
                     ),
                     const SizedBox(
-                      width: 5,
+                      height: 3,
                     ),
                     Text(
                       coffee.nutritionInfo,
