@@ -1,4 +1,6 @@
 import 'package:coffere_app/widgets/coffee_home.dart';
+import 'package:coffere_app/widgets/coffee_list.dart';
+import 'package:coffere_app/widgets/home/coffee_landing_page2.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,6 +1,6 @@
 import 'package:coffere_app/model/coffee.dart';
 import 'package:coffere_app/widgets/coffee_list.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 const Duration animationDuration = Duration(milliseconds: 500);
